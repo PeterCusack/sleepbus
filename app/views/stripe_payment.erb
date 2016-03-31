@@ -13,7 +13,7 @@
     <% end %>
     </label>
     <label class="checkout-amount">
-      <span>Amount: $<%= cost %></span>
+      <span>Amount: $<%= cost / 100 %></span>
     </label>
   </article>
   <input type="hidden" value="<%= cost %>" name="cost">
@@ -21,7 +21,7 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= settings.publishable_key %>"
           data-description="Bus tickets for <%= passengers.length %> Passenger(s)"
-          data-amount= "<%= cost / 100 %>"
+          data-amount= "<%= cost %>"
           data-locale="auto"></script>
 </form>
 

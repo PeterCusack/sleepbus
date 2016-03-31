@@ -17,11 +17,9 @@ post "/passengers" do
 			# return error message of some kind
 		end
 			# do something because we didn't save the passenger
-		# Ticket.create({
-		# 	passenger_id: passenger.id,
-		# 	trip_id: params["trip_id"].to_i
-		# 	})
+			# (I moved ticket creation to the charge controller )
 	end
+	p passengers
 	content_type :json
 	checkoutTemplate = erb :stripe_payment, layout: false, locals: {cost: (6500 * passengers.length), passengers: passengers}
 	return checkoutTemplate.to_json

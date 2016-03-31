@@ -4,6 +4,8 @@ class CreatePassengersTable < ActiveRecord::Migration
   		f.string :first_name
   		f.string :last_name
   		f.string :email
+
+      f.timestamps
   	end
   end
 end
