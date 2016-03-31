@@ -33,6 +33,7 @@ var View = {
 			});
 
 			$(document).on("submit", ".stripe-payment-form", function(event){
+				debugger
 				event.preventDefault();
 				stripeData = $(this).serializeArray()
 				$.ajax({

@@ -1,15 +1,27 @@
 <form action="/stripe/charge" method="post" class="stripe-payment-form">
   <article>
-    <label class="checkout-num-passengers"> Passengers: <%= num_passengers %></label>
+    <label class="checkout-num-passengers"> Passengers: <%= passengers.length %></label>
+    <label class="checkout-passenger-info">
+    You're purchasing <%= passengers.length %> tickets:
+    Passengers:
+    <!-- Just display all the passenger info again so the user is doubly sure -->
+    <!-- what's happening -->
+    <% passengers.each do |passenger| %>
+    <%= passenger[:first_name] %>
+    <%= passenger[:last_name] %>
+    <%= passenger[:email] %>
+    <% end %>
+    </label>
     <label class="checkout-amount">
       <span>Amount: $<%= cost %></span>
     </label>
   </article>
   <input type="hidden" value="<%= cost %>" name="cost">
+  <input type="hidden" value="<% passengers.map {|p| p[:id] } %>" name="passengerIDs">
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= settings.publishable_key %>"
-          data-description="Bus tickets for <%= num_passengers %> Passenger(s)"
-          data-amount= "<%= cost * 100 %>"
+          data-description="Bus tickets for <%= passengers.length %> Passenger(s)"
+          data-amount= "<%= cost / 100 %>"
           data-locale="auto"></script>
 </form>
 
