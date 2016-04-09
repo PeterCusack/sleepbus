@@ -320,8 +320,9 @@ Landing Main
 
 .homepage-text-flex-box > * {
 	margin: 5% auto;
-	white-space: nowrap;
-	max-width: 100%;
+	/*white-space: nowrap;
+	max-width: 100%;*/
+	width: 300px;
 }
 
 .info-text-lg {
