@@ -316,16 +316,17 @@ Landing Main
 
 .text-block {
 	padding: 12% 0;
-	width: 100%;
+
 }
 
-/*
+
 @media (min-device-width: 500px) { 
 
 .text-block {
 	padding: 12% 0;
+	width: 100%;
 	
-}*/
+}
 
 
 }
