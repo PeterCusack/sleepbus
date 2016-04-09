@@ -320,9 +320,8 @@ Landing Main
 
 .homepage-text-flex-box > * {
 	margin: 5% auto;
-	/*white-space: nowrap;
-	max-width: 100%;*/
-	width: 300px;
+	white-space: nowrap;
+	max-width: 100%;
 }
 
 .info-text-lg {
@@ -338,6 +337,7 @@ Landing Main
 	font-size: 22px;
 	color: #505050;
 	line-height: 32px;
+	width: 400px;
 }
 
 .homepage-text-flex-box .scroll-down{
