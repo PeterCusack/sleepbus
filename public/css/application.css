@@ -318,6 +318,17 @@ Landing Main
 	padding: 12% 0;
 }
 
+
+@media screen and (max-device-width: 400px) { 
+
+.text-block {
+	padding: 12% 0;
+	width: 100%;
+}
+
+
+}
+
 .homepage-text-flex-box > * {
 	margin: 5% auto;
 	white-space: nowrap;
@@ -337,7 +348,6 @@ Landing Main
 	font-size: 22px;
 	color: #505050;
 	line-height: 32px;
-	width: 400px;
 }
 
 .homepage-text-flex-box .scroll-down{
